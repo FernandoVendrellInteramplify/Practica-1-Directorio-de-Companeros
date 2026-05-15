@@ -56,15 +56,17 @@ export default async function CompaneroDetailPage({
     <main className="animate-fade-up mx-auto min-h-screen max-w-3xl px-6 py-12">
       <Link
         href="/companeros"
-        className="mb-8 inline-flex text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
+        className="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-all hover:gap-3 hover:text-blue-700 dark:text-blue-400"
       >
-        ← Volver al listado
+        <span className="transition-transform group-hover:-translate-x-1">
+        ←</span>
+        Volver al listado
       </Link>
 
-      <article className="animate-fade-up animation-delay-100 rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-        <div className="space-y-6">
+      <article className="animate-fade-up animation-delay-100 rounded-2xl border border-zinc-200 bg-zinc-50 p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="space-y-10">
           <div>
-            <h1 className="text-4xl font-bold">
+            <h1 className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-4xl font-extrabold text-transparent">
               {coworker.nombre}
             </h1>
 
@@ -73,17 +75,17 @@ export default async function CompaneroDetailPage({
             </p>
           </div>
 
-          <section>
+          <section className="space-y-3">
             <h2 className="mb-2 text-xl font-semibold">
               Biografía
             </h2>
 
-            <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
+            <p className="leading-8 text-zinc-700 tracking-wide dark:text-zinc-300">
               {coworker.bio}
             </p>
           </section>
 
-          <section>
+          <section className="space-y-3">
             <h2 className="mb-3 text-xl font-semibold">
               Tecnologías favoritas
             </h2>

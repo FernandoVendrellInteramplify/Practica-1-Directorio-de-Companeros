@@ -18,10 +18,11 @@ export default function CompanerosPage() {
 
         <Link
           href="/"
-          className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
+          className="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-all hover:gap-3 hover:text-blue-700 dark:text-blue-400"
         >
-          ← Volver al inicio
-        </Link>
+        <span className="transition-transform group-hover:-translate-x-1"> ←</span>
+        Volver al listado
+      </Link>
       </div>
 
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
