@@ -2,15 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { slugify } from "@/lib/slugify";
-
 import { coworkers } from "@/lib/data";
 
 interface PageProps {
   params: {
     slug: string;
-  };
-}
-
+  };}
 
 export async function generateStaticParams() {
   return coworkers.map((coworker) => ({
@@ -29,14 +26,12 @@ export async function generateMetadata({
   if (!coworker) {
     return {
       title: "Compañero no encontrado",
-    };
-  }
+    };}
 
   return {
     title: coworker.nombre,
     description: coworker.bio,
-  };
-}
+  };}
 
 export default async function CompaneroDetailPage({
   params,
@@ -44,26 +39,24 @@ export default async function CompaneroDetailPage({
   const { slug } = await params;
   const coworker = coworkers.find(
     (item) =>
-      slugify(item.nombre) === slug
-  );
+      slugify(item.nombre) === slug);
 
   if (!coworker) {
-    notFound();
-  }
+    notFound();}
 
 
   return (
-    <main className="animate-fade-up mx-auto min-h-screen max-w-3xl px-6 py-12">
+    <main className="mx-auto min-h-screen max-w-3xl px-6 py-12">
       <Link
         href="/companeros"
-        className="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-all hover:gap-3 hover:text-blue-700 dark:text-blue-400"
+        className="animate-[fadeLeft_.7s_ease-out] group mb-8 inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-all hover:gap-3 hover:text-blue-700 dark:text-blue-400"
       >
         <span className="transition-transform group-hover:-translate-x-1">
         ←</span>
         Volver al listado
       </Link>
 
-      <article className="animate-fade-up animation-delay-100 rounded-2xl border border-zinc-200 bg-zinc-50 p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+      <article className="animate-[fadeUp_0.6s_ease-out_forwards] rounded-2xl border border-zinc-200 bg-zinc-50 p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
         <div className="space-y-10">
           <div>
             <h1 className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-4xl font-extrabold text-transparent">

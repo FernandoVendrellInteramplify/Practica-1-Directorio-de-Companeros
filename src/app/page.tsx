@@ -23,8 +23,8 @@ export default function HomePage() {
         : "scale-100 opacity-100"
       }`}>
         
-      <div className="max-w-2xl space-y-8 rounded-3xl borderborder-white/20 bg-white/70 p-12
-        shadow-2xl backdrop-blur-xl dark:border-zinc-800 dark:bg-zinc-900/70">
+      <div className="max-w-2xl space-y-8 rounded-3xl borderborder-zinc-50/20 bg-zinc-50/70 p-12
+        shadow-2xl backdrop-blur-xl dark:border-zinc-800 dark:bg-zinc-950/70">
           
         <h1 className="animate-fade-up text-5xl font-bold tracking-tight">
           Directorio del equipo
@@ -37,7 +37,7 @@ export default function HomePage() {
         <button
   onClick={handleClick}
   className="animate-fade-up group inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-8 py-4
-    font-semibold text-white shadow-lg shadow-blue-500/30 transition-all duration-300
+    font-semibold text-zinc-50 shadow-lg shadow-blue-500/30 transition-all duration-300
     hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 hover:shadow-2xl
     dark:bg-blue-500 dark:hover:bg-blue-400"
   >
